@@ -23,6 +23,12 @@ add the following line to /etc/rc.local:
 sudo reboot  
 ```
 
+Caution: 
+The smb.conf provided here sets the drives to be publicly accessible without any password,
+and guests access the files in the shares as root.
+
+
+
 References:
 * http://www.axllent.org/docs/view/auto-mounting-usb-storage/  
 * http://superuser.com/questions/53978/automatically-mount-external-drives-to-media-label-on-boot-without-a-user-logge  
