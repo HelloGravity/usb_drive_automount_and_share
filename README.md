@@ -2,22 +2,26 @@ This is a bunch of scripts I wrote for my NAS (a Raspberry Pi) to enable auto-mo
 and automatically share the drive through SMB using samba.
 
 Installation:
+```bash
+* make sure you have samba installed  
+* clone the repo  
+* cd to the repo  
 
-0.  make sure you have samba installed  
-1.  clone the repo  
-2.  cd to the repo  
-3.  sudo mv udev/rules.d/10-usb_drives.rules /etc/udev/rules.d/  
-4.  sudo mv udev/usb* /etc/udev/  
-5.  sudo chmod +x /etc/udev/usb_*  
-6.  sudo mv usr_local_sbin/cleanup_devices.sh /usr/local/sbin/  
-7.  sudo chmod +x /usr/local/sbin/cleanup_devices.sh  
-8.  sudo mv samba/load_usb_shares.sh /etc/samba/  
-9.  sudo chmod +x /etc/samba/load_usb_shares.sh  
-10. sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.orig  
-11. sudo mv samba/smb.conf /etc/samba/smb.conf  
-12. add the following line to /etc/rc.local: /usr/local/sbin/cleanup_devices.sh &  
-13. sudo reboot  
+sudo mv udev/rules.d/10-usb_drives.rules /etc/udev/rules.d/  
+sudo mv udev/usb* /etc/udev/  
+sudo chmod +x /etc/udev/usb_*  
+sudo mv usr_local_sbin/cleanup_devices.sh /usr/local/sbin/  
+sudo chmod +x /usr/local/sbin/cleanup_devices.sh  
+sudo mv samba/load_usb_shares.sh /etc/samba/  
+sudo chmod +x /etc/samba/load_usb_shares.sh  
+sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.orig  
+sudo mv samba/smb.conf /etc/samba/smb.conf  
 
+add the following line to /etc/rc.local: 
+   /usr/local/sbin/cleanup_devices.sh &  
+   
+sudo reboot  
+```
 
 References:
 * http://www.axllent.org/docs/view/auto-mounting-usb-storage/  
