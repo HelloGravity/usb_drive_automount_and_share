@@ -2,6 +2,7 @@ This is a bunch of scripts I wrote for my NAS (a Raspberry Pi) to enable auto-mo
 and automatically share the drive through SMB using samba.
 
 Installation:
+
 0.  make sure you have samba installed  
 1.  clone the repo  
 2.  cd to the repo  
